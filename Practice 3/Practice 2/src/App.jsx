@@ -1,10 +1,12 @@
 import React from 'react'
-import Navbar2 from './Components/Navbar2'
+import Navbar from './Components/Navbar2'
+import Hero from './Components/Hero/Hero'
 
 function App() {
   return (
-    <div>
-      <Navbar2/>
+    <div className='bg-blue-950'>
+      <Navbar/>
+      <Hero/>
     </div>
   )
 }
