@@ -1,6 +1,10 @@
 import React from "react";
 import about from "../../assets/about.svg";
-import { MdCardMembership } from "react-icons/md";
+import { AiFillAlert } from "react-icons/ai";
+import { AiFillBuild } from "react-icons/ai";
+import { AiFillCrown } from "react-icons/ai";
+import { AiFillEuroCircle } from "react-icons/ai";
+
 
 function About() {
   return (
@@ -28,7 +32,7 @@ function About() {
       </div>
       {}
       <div className="px-4 lg:px-14  max-w-screen-2xl mx-auto  py-16">
-        <div>
+        <div className="flex  flex-col md:flex-row justify-between items-center gap-8">
           <div className="md:w-1/2">
           <h2 className="text-4xl font-semibold mb-4  md:w-4/5">
               Helping a local <br/> <span className="text-lime-500"> buniness reivent itself </span> 
@@ -38,25 +42,52 @@ function About() {
             </p>
 
           </div>
-        </div>
+        
 
-      </div>
+      
       {}
-      <div className="md:w-1/2  mx-auto">
-        <div className="flex items-center  gap-4">
-          <MdCardMembership/>
-          <div>
-            <h4 className="text-2xl font-semibold ">2, 245, 321</h4>
+      <div className="md:1/2  mx-auto  flex sm:flex-row flex-col sm:items-center justify-around gap-8">
+        <div className="space-y-8">
+          <div className="flex items-center gap-4">
+            <AiFillAlert />
+            <div>
+              <h4 className=" text-2xl font-semibold ">2, 34, 4561</h4>
+              <p>Members</p>
+            </div>
           </div>
+          <div className="flex items-center gap-4">
+           <AiFillBuild />
+            <div>
+              <h4 className=" text-2xl font-semibold ">2, 34, 4561</h4>
+              <p>Members</p>
+            </div>
+          </div>
+          
+          
         </div>
-        <div className="flex items-center  gap-4">
-          <MdCardMembership/>
-          <div>
-            <h4 className="text-2xl font-semibold ">2, 245, 321</h4>
+
+        <div className="space-y-8">
+          <div className="flex items-center gap-4">
+          <AiFillCrown />
+            <div>
+              <h4 className=" text-2xl font-semibold ">2, 34, 4561</h4>
+              <p>Members</p>
+            </div>
           </div>
+          <div className="flex items-center gap-4">
+            <AiFillEuroCircle/>
+            <div>
+              <h4 className=" text-2xl font-semibold ">2, 34, 4561</h4>
+              <p>Members</p>
+            </div>
+          </div>
+          
+          
         </div>
       </div>
 
+      </div>
+      </div>
     </div>
   );
 }
