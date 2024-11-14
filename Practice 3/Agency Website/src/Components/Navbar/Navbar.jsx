@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.jpg";
 import { FaBars, FaXmark } from "react-icons/fa6";
-// import { faMoon } from "@fortawesome/free-regular-svg";
-import { IoMoon } from "react-icons/io5";
-import { IoSunny } from "react-icons/io5";
-import { IconContext } from "react-icons";
+import DarkMode from "../DarkMode";
 
 function Navbar() {
   const [ismenu, setIsmenu] = useState(false);
@@ -41,8 +38,6 @@ function Navbar() {
     { Link: "Service", path: "Service" },
     { Link: "About", path: "about" },
     { Link: "Product", path: "product" },
-    // {Link: "Testtimonai",  path: "testtimonai"},
-    // {Link: "FAQ",  path: "FAQ"},
   ];
 
   return (
@@ -80,19 +75,13 @@ function Navbar() {
               ))}
             </ul>
             {/* btn for large devices  */}
+
             <div className="space-x-12  hidden lg:flex items-center  ">
-            <button className="" onClick={()=> darkModeHandler()}>
-                {
-                    
-                    dark && <IoSunny />
-                }
-                {
-                    !dark && <IoMoon />
-                }
-            </button>
+            <DarkMode/>
+            
               <a
                 href=""
-                className="   hidden lg:flex items-center text-lime-500 hover:text-gray-900"
+                className="hidden lg:flex items-center text-lime-500 hover:text-gray-900"
               >
                 Login
               </a>
