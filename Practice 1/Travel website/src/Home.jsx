@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from './Hero'
+import Service from './Service'
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
         </div>
     </div>
     <Hero/>
+    <Service/>
     </div>
   )
 }

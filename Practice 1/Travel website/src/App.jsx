@@ -1,12 +1,12 @@
 import React from 'react'
 import Home from './Home';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 import {
   BrowserRouter,
   createBrowserRouter,
   Route,
-  RouterProvider,
   Routes,
 } from "react-router-dom";
 import Hero from './Hero';
@@ -14,14 +14,6 @@ import Hero from './Hero';
 
 
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home/>,
-  },
-  
-]);
 
 
 function App() {
@@ -33,6 +25,7 @@ function App() {
       <Route path='/hero' element={<Hero/>}></Route>
 
     </Routes>
+    <Footer/>
     </BrowserRouter>
   )
 }
