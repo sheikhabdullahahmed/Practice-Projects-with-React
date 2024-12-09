@@ -1,35 +1,28 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import React, { useState } from 'react';
 
-function Hero() {
-    const [data, setData] = useState()
+function Hero({ onSearch }) {
+  const [query, setQuery] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (query) {
+      onSearch(query);
+    }
+  };
 
-    const myFun = async () =>{
-      if(search == ""){
-          setMsg("Please Enter Something")
-      }else{
-          const get = await fetch(`www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata`);
-          const jsonData = await get.json();
-      console.log(jsonData.meals);
-      setData(jsonData.meals)
-      setMsg("")
-      
-      }
-       
-  }
-
-    
-     
-   
   return (
-    <div className='container'>
-        <div className='searchBar' >
-            <input type="text" placeholder='Enter Dishe ' name="" id="" />
-            <button onClick={myFun}>Search</button>
-        </div>
+    <div>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Search for recipes..."
+        />
+        <button type="submit">Search</button>
+      </form>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
