@@ -7,7 +7,6 @@ import {
 import Home from "./Components/Home";
 import Coin from "./Components/Coin";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
