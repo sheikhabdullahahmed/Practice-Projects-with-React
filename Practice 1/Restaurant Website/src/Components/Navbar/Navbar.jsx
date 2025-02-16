@@ -1,7 +1,8 @@
 import React from "react";
 import logo from "../../assets/assets/food-logo.png";
-import {FaCartShopping} from 'react-icons/fa6'
-import DarkMode from "../DarkMode";
+import { FaCartShopping } from "react-icons/fa6";
+import Button from "../Button/index";
+// import DarkMode from "../
 
 function Navbar() {
   return (
@@ -13,47 +14,50 @@ function Navbar() {
               href="#"
               className="flex justify-center  items-center gap-2 text-2xl sm:text-3xl"
             >
-              <img src={logo} alt="foodie zone" className="w-10" /> Foodie
+              <img src={logo} alt="foodie zone" className="w-10 mx-2" /> Foodie
             </a>
           </div>
-          <div className="flex  items-center gap-4">
-            <div>
-                <DarkMode/>
-            </div>
-            <ul className="hidden sm:flex gap-4">
+          <div className="flex  items-center text-center my-2  font-semibold gap-3">
+            <ul className="hidden sm:flex ">
               <li>
                 <a
-                  href="#"
-                  className="inline-block py-4 px-4 hover:text-primary"
+                  href="/"
+                  className="inline-block w-24 h-12 py-3 transition-all duration-300 ease-in-out 
+             hover:bg-blue-500 hover:text-white hover:border hover:rounded-2xl"
                 >
                   Home
                 </a>
-              </li>
-              <li>
+                </li>
+                <li>
                 <a
-                  href="#"
-                  className="inline-block py-4 px-4 hover:text-primary"
+                  href="/contact"
+                  className="inline-block w-24 h-12 py-3 transition-all duration-300 ease-in-out 
+             hover:bg-blue-500 hover:text-white hover:border hover:rounded-2xl"
                 >
                   Contact
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
-                  className="inline-block py-4 px-4 hover:text-primary"
+                  href="/about"
+                  className="inline-block w-24 h-12 py-3 transition-all duration-300 ease-in-out 
+             hover:bg-blue-500 hover:text-white hover:border hover:rounded-2xl"
                 >
                   About
                 </a>
               </li>
             </ul>
-            <button className="bg-gradient-to-r from-yellow-300 to-secondary text-white px-4 py-1 rounded-full hover:scale-105 duration-300 
-            flex item-center gap-3
-            ">
-              order
-              <FaCartShopping className = " text-xl  text-white  drop-shadow-sm cursor-pointer" />
+
+            <button
+              className="bg-yellow-400 text-white px-4 py-2 mx-3  font-semibold rounded-full  
+            flex item-center gap-2
+            "
+            >
+              Order
+              <FaCartShopping className=" md:text-base  text-xl  text-white   cursor-pointer" />
             </button>
           </div>
-          </div>
+        </div>
       </div>
     </div>
   );
