@@ -14,7 +14,7 @@ function Products() {
             id:2, title: "What are you safeguading repnsibilites and how can you manage them ?", image: blog2,
         }, 
         {
-            id:3, title: "Reveping the memeberShip Model with Austrailia ", image: blog3,
+            id:3, title: "Revepinng the memeberShip Model with Austrailia ", image: blog3,
         }
     ]
 
